@@ -8,6 +8,12 @@ class Wrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = Provider.of<User>(context);
-    return Athenticate();
+    
+    if(user == null){
+      return Athenticate();
+    }
+    else{
+      return Home();
+    }
   }
 }
