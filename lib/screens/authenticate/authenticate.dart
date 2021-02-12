@@ -11,7 +11,7 @@ class _AthenticateState extends State<Athenticate> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Register(),
+      child: SignIn(),
     );
   }
 }
