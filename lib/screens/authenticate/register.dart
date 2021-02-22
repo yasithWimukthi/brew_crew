@@ -53,6 +53,7 @@ class _RegisterState extends State<Register> {
               SizedBox(height: 20.0),
               TextFormField(
                 obscureText: true,
+                validator: (val) => val.length <= 6 ? 'Password must have minimum 6 characters' : null,
                 onChanged: (val){
                   setState(()=> password = val);
                 },
