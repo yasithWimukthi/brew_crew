@@ -45,6 +45,7 @@ class _RegisterState extends State<Register> {
             children: <Widget>[
               SizedBox(height: 20.0),
               TextFormField(
+                validator: (val) => val.isEmpty ? 'Enter an Email' : null,
                 onChanged: (val){
                   setState(()=> email = val);
                 },
@@ -66,7 +67,9 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
                 onPressed: () async{
+                  if(_formKey.currentState.validate()){
 
+                  }
                 },
               ),
             ],
